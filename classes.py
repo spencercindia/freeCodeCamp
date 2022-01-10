@@ -1,26 +1,13 @@
 class Phone:
-    pass
+    def __init__(self, model, color, size, owner):
+        self.model = model
+        self.color = color
+        self.owner = owner
+        self.size = size
+    def owner_model(self):
+        return '{} {}'.format(self.owner, self.model)
 
-phone1 = Phone()
-phone2 = Phone()
+phone1 = Phone('13', 'Gray', 'Max', 'Josee')
+phone2 = Phone('XR', 'Black', 'Normal', 'Spencer')
 
-phone1.model = '13'
-phone1.color = 'Gray'
-phone1.size = 'Max'
-phone1.owner = ""
-
-phone2.model = 'XR'
-phone2.color = 'Black'
-phone2.size = 'Normal'
-phone2.owner = ""
-
-ask = input("What model is your phone? ")
-
-if ask == "13":
-    phone1.owner = "Josee"
-    phone2.owner = "Spencer"
-else:
-    phone1.owner = "Spencer"
-    phone2.owner = "Josee"
-
-print(phone1.owner)
+print(phone1.owner_model())
